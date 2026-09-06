@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pixel Forge, tienda de videojuegos para descubrir y reservar nuevos juegos.">
+  <title>Pixel Forge | Tienda de videojuegos</title>
+</head>
+<body>
+  <header>
+    <nav aria-label="Navegación principal">
+      <a href="index.html">Pixel Forge</a>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#categorias">Categorías</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" aria-labelledby="titulo-principal">
+      <p>Tienda independiente de videojuegos</p>
+      <h1 id="titulo-principal">Encuentra tu próxima aventura</h1>
+      <p>Explora una selección de videojuegos para diferentes plataformas y descubre nuevas experiencias para jugar.</p>
+      <a href="#catalogo">Ver catálogo</a>
+    </section>
+
+    <section id="catalogo" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo destacado</h2>
+      <p>Conoce algunos de los videojuegos disponibles en Pixel Forge.</p>
+
+      <div>
+        <article>
+          <h3>Horizonte Perdido</h3>
+          <p>Género: Aventura</p>
+          <p>Una expedición por ruinas antiguas donde cada decisión cambia el camino.</p>
+          <p>Plataformas: PC, PlayStation 5</p>
+          <p>Precio: $149.900 COP</p>
+          <a href="#contacto">Solicitar información</a>
+        </article>
+
+        <article>
+          <h3>Neon Circuit</h3>
+          <p>Género: Acción</p>
+          <p>Compite a toda velocidad en una ciudad futurista llena de desafíos.</p>
+          <p>Plataformas: PC, Xbox Series</p>
+          <p>Precio: $119.900 COP</p>
+          <a href="#contacto">Solicitar información</a>
+        </article>
+
+        <article>
+          <h3>Reinos de Ceniza</h3>
+          <p>Género: Rol</p>
+          <p>Forma tu equipo, explora un reino en guerra y decide su futuro.</p>
+          <p>Plataformas: PC, Nintendo Switch</p>
+          <p>Precio: $169.900 COP</p>
+          <a href="#contacto">Solicitar información</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="categorias" aria-labelledby="titulo-categorias">
+      <h2 id="titulo-categorias">Categorías</h2>
+      <ul>
+        <li><a href="#catalogo">Aventura</a></li>
+        <li><a href="#catalogo">Acción</a></li>
+        <li><a href="#catalogo">Rol</a></li>
+        <li><a href="#catalogo">Estrategia</a></li>
+      </ul>
+    </section>
+
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contáctanos</h2>
+      <p>Escríbenos para consultar disponibilidad o solicitar una reserva.</p>
+
+      <form action="#contacto" method="post">
+        <p>
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </p>
+
+        <p>
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required>
+        </p>
+
+        <p>
+          <label for="videojuego">Videojuego de interés</label>
+          <select id="videojuego" name="videojuego" required>
+            <option value="">Selecciona un videojuego</option>
+            <option value="horizonte-perdido">Horizonte Perdido</option>
+            <option value="neon-circuit">Neon Circuit</option>
+            <option value="reinos-de-ceniza">Reinos de Ceniza</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </p>
+
+        <button type="submit">Enviar consulta</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Pixel Forge. Tienda independiente de videojuegos.</p>
+  </footer>
+</body>
+</html>
