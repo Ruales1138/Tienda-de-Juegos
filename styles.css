@@ -2,11 +2,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --azul-noche: #172554;
+  --azul: #2563eb;
+  --turquesa: #14b8a6;
+  --coral: #f97316;
+  --amarillo: #facc15;
+  --fondo: #eff6ff;
+  --texto: #172033;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #222222;
-  background-color: #f2f2f2;
+  color: var(--texto);
+  background-color: var(--fondo);
   line-height: 1.5;
 }
 
@@ -14,7 +24,7 @@ header,
 footer {
   padding: 20px;
   color: #ffffff;
-  background-color: #222222;
+  background-color: var(--azul-noche);
 }
 
 nav {
@@ -28,6 +38,17 @@ nav {
 nav a {
   color: #ffffff;
   text-decoration: none;
+}
+
+nav > a {
+  color: var(--amarillo);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+nav ul a:hover,
+nav ul a:focus {
+  color: var(--turquesa);
 }
 
 nav ul {
@@ -49,7 +70,17 @@ section {
 
 #inicio {
   text-align: center;
-  background-color: #dddddd;
+  background: linear-gradient(135deg, #dbeafe, #ccfbf1);
+}
+
+#inicio p:first-child {
+  color: var(--coral);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#inicio h1 {
+  color: var(--azul-noche);
 }
 
 #catalogo > div {
@@ -61,7 +92,22 @@ section {
 article {
   padding: 20px;
   background-color: #ffffff;
-  border: 1px solid #cccccc;
+  border: 2px solid #bfdbfe;
+  border-top: 5px solid var(--turquesa);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(23, 37, 84, 0.08);
+}
+
+article:nth-child(2) {
+  border-top-color: var(--coral);
+}
+
+article:nth-child(3) {
+  border-top-color: var(--azul);
+}
+
+article h3 {
+  color: var(--azul-noche);
 }
 
 article a,
@@ -69,14 +115,32 @@ button {
   display: inline-block;
   padding: 10px 15px;
   color: #ffffff;
-  background-color: #333333;
+  background-color: var(--azul);
   border: 0;
+  border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
 }
 
+article a:hover,
+article a:focus,
+button:hover,
+button:focus {
+  background-color: var(--coral);
+}
+
 #categorias ul {
   padding-left: 20px;
+}
+
+#categorias a {
+  color: var(--azul);
+  font-weight: bold;
+}
+
+#categorias a:hover,
+#categorias a:focus {
+  color: var(--coral);
 }
 
 form {
@@ -95,7 +159,16 @@ select,
 textarea {
   padding: 10px;
   font: inherit;
-  border: 1px solid #aaaaaa;
+  border: 2px solid #bfdbfe;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #99f6e4;
+  border-color: var(--turquesa);
 }
 
 footer {
