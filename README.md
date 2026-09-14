@@ -5,7 +5,7 @@ Pixel Forge es una tienda independiente de videojuegos pensada para personas que
 ## Enlaces
 
 - Repositorio: https://github.com/Ruales1138/Tienda-de-Juegos
-- Sitio en Vercel: pendiente de conectar en Vercel
+- Sitio en Vercel: https://tienda-de-juegos-e50d5q980-ruales.vercel.app/
 
 ## Capturas
 
