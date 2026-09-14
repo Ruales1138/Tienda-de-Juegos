@@ -9,10 +9,13 @@ Pixel Forge es una tienda independiente de videojuegos pensada para personas que
 
 ## Capturas
 
-Añadir aquí una captura de escritorio y otra de móvil después del despliegue:
+### Escritorio
 
-- `capturas/escritorio.png`
-- `capturas/movil.png`
+![Pixel Forge en escritorio](capturas/escritorio.png)
+
+### Móvil
+
+![Pixel Forge en móvil](capturas/movil.png)
 
 ## Decisiones técnicas
 
