@@ -21,7 +21,7 @@ Pixel Forge es una tienda independiente de videojuegos pensada para personas que
 
 **HTML y CSS.** La página usa `header`, `nav`, `main`, `section` y `footer` para separar las partes principales. El catálogo usa CSS Grid porque necesita distribuir tarjetas en columnas que cambian según el ancho de pantalla. El menú, la barra de filtros y los formularios usan Flexbox porque allí importa alinear elementos y permitir que se acomoden en una fila o varias.
 
-**JavaScript.** El catálogo se construye a partir del arreglo `juegos`, por lo que las tarjetas y las opciones del formulario se generan desde una misma fuente de datos. También se puede filtrar por categoría, abrir y cerrar el menú móvil y cambiar entre modo oscuro y claro. La preferencia del tema se guarda en `localStorage` para conservarla al volver a la página.
+**JavaScript.** El catálogo se construye a partir del arreglo `juegos`, por lo que las tarjetas y las opciones del formulario se generan desde una misma fuente de datos. También se puede filtrar por categoría y abrir y cerrar el menú móvil.
 
 **Validación.** El formulario no se envía si el nombre tiene menos de dos caracteres, el correo no tiene un formato válido, no se seleccionó un videojuego o el mensaje tiene menos de diez caracteres. Cada error aparece junto al campo correspondiente y el formulario indica cuando la consulta está lista.
 

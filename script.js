@@ -100,21 +100,6 @@ menu.addEventListener("click", () => {
 });
 
 const formulario = document.querySelector("form");
-const themeToggle = document.querySelector(".theme-toggle");
-
-function aplicarTema(tema) {
-  const modoClaro = tema === "claro";
-  document.body.classList.toggle("light-mode", modoClaro);
-  themeToggle.setAttribute("aria-pressed", String(modoClaro));
-  themeToggle.setAttribute("aria-label", modoClaro ? "Activar modo oscuro" : "Activar modo claro");
-  themeToggle.textContent = modoClaro ? "☾" : "☼";
-}
-
-themeToggle.addEventListener("click", () => {
-  const tema = document.body.classList.contains("light-mode") ? "oscuro" : "claro";
-  localStorage.setItem("pixel-forge-tema", tema);
-  aplicarTema(tema);
-});
 
 function mostrarError(campo, mensaje) {
   const entrada = document.querySelector(`#${campo}`);
@@ -154,4 +139,3 @@ formulario.addEventListener("submit", (evento) => {
 
 mostrarJuegos();
 cargarOpcionesFormulario();
-aplicarTema(localStorage.getItem("pixel-forge-tema") || "oscuro");

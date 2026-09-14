@@ -16,16 +16,6 @@
   --sombra: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
-body.light-mode {
-  --fondo: #eef4f5;
-  --superficie: #ffffff;
-  --texto: #142333;
-  --texto-suave: #4c6071;
-  --borde: #c7d5dc;
-  --sombra: 0 18px 40px rgba(39, 72, 91, 0.14);
-  background: var(--fondo);
-}
-
 body {
   margin: 0;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
@@ -61,20 +51,6 @@ nav > a {
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: 0.02em;
-}
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  margin: 0 0 0 auto;
-  padding: 0;
-  color: var(--amarillo);
-  background: transparent;
-  border: 1px solid var(--borde);
-  font-size: 1.2rem;
 }
 
 .menu-toggle {
@@ -192,12 +168,6 @@ section {
 #categorias,
 #contacto {
   background: #0f1725;
-}
-
-.light-mode #catalogo,
-.light-mode #categorias,
-.light-mode #contacto {
-  background: #e5eef0;
 }
 
 #catalogo h2,
