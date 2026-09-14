@@ -33,6 +33,8 @@ const juegos = [
 
 const catalogo = document.querySelector("#catalogo-grid");
 const videojuegoSelect = document.querySelector("#videojuego");
+const filterButtons = document.querySelectorAll("[data-filter]");
+const categoryLinks = document.querySelectorAll("[data-category-link]");
 
 function crearTarjeta(juego) {
   const tarjeta = document.createElement("article");
@@ -51,11 +53,29 @@ function crearTarjeta(juego) {
   return tarjeta;
 }
 
-function mostrarJuegos() {
-  juegos.forEach((juego) => {
-    catalogo.append(crearTarjeta(juego));
-  });
+function mostrarJuegos(filtro = "todos") {
+  catalogo.replaceChildren();
+  juegos
+    .filter((juego) => filtro === "todos" || juego.categoria === filtro)
+    .forEach((juego) => catalogo.append(crearTarjeta(juego)));
 }
+
+function activarFiltro(filtro) {
+  filterButtons.forEach((boton) => {
+    const activo = boton.dataset.filter === filtro;
+    boton.classList.toggle("is-active", activo);
+    boton.setAttribute("aria-pressed", String(activo));
+  });
+  mostrarJuegos(filtro);
+}
+
+filterButtons.forEach((boton) => {
+  boton.addEventListener("click", () => activarFiltro(boton.dataset.filter));
+});
+
+categoryLinks.forEach((enlace) => {
+  enlace.addEventListener("click", () => activarFiltro(enlace.dataset.categoryLink));
+});
 
 function cargarOpcionesFormulario() {
   juegos.forEach((juego) => {
@@ -80,6 +100,21 @@ menu.addEventListener("click", () => {
 });
 
 const formulario = document.querySelector("form");
+const themeToggle = document.querySelector(".theme-toggle");
+
+function aplicarTema(tema) {
+  const modoClaro = tema === "claro";
+  document.body.classList.toggle("light-mode", modoClaro);
+  themeToggle.setAttribute("aria-pressed", String(modoClaro));
+  themeToggle.setAttribute("aria-label", modoClaro ? "Activar modo oscuro" : "Activar modo claro");
+  themeToggle.textContent = modoClaro ? "☾" : "☼";
+}
+
+themeToggle.addEventListener("click", () => {
+  const tema = document.body.classList.contains("light-mode") ? "oscuro" : "claro";
+  localStorage.setItem("pixel-forge-tema", tema);
+  aplicarTema(tema);
+});
 
 function mostrarError(campo, mensaje) {
   const entrada = document.querySelector(`#${campo}`);
@@ -119,3 +154,4 @@ formulario.addEventListener("submit", (evento) => {
 
 mostrarJuegos();
 cargarOpcionesFormulario();
+aplicarTema(localStorage.getItem("pixel-forge-tema") || "oscuro");

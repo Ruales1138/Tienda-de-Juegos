@@ -16,6 +16,16 @@
   --sombra: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
+body.light-mode {
+  --fondo: #eef4f5;
+  --superficie: #ffffff;
+  --texto: #142333;
+  --texto-suave: #4c6071;
+  --borde: #c7d5dc;
+  --sombra: 0 18px 40px rgba(39, 72, 91, 0.14);
+  background: var(--fondo);
+}
+
 body {
   margin: 0;
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
@@ -51,6 +61,20 @@ nav > a {
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: 0.02em;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 0 auto;
+  padding: 0;
+  color: var(--amarillo);
+  background: transparent;
+  border: 1px solid var(--borde);
+  font-size: 1.2rem;
 }
 
 .menu-toggle {
@@ -170,6 +194,12 @@ section {
   background: #0f1725;
 }
 
+.light-mode #catalogo,
+.light-mode #categorias,
+.light-mode #contacto {
+  background: #e5eef0;
+}
+
 #catalogo h2,
 #categorias h2,
 #contacto h2 {
@@ -190,6 +220,29 @@ section {
   grid-template-columns: repeat(3, 1fr);
   gap: 36px;
   margin-top: 44px;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.filter-button {
+  margin: 0;
+  padding: 9px 14px;
+  color: var(--texto);
+  background: transparent;
+  border: 1px solid var(--borde);
+}
+
+.filter-button.is-active,
+.filter-button:hover,
+.filter-button:focus-visible {
+  color: var(--azul-noche);
+  background: var(--turquesa);
+  border-color: var(--turquesa);
 }
 
 article {

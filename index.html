@@ -11,6 +11,7 @@
   <header>
     <nav aria-label="Navegación principal">
       <a href="index.html">Pixel Forge</a>
+      <button class="theme-toggle" type="button" aria-label="Activar modo claro" aria-pressed="false">☼</button>
       <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
         <span aria-hidden="true">☰</span>
         Menú
@@ -35,6 +36,12 @@
     <section id="catalogo" aria-labelledby="titulo-catalogo">
       <h2 id="titulo-catalogo">Catálogo destacado</h2>
       <p>Conoce algunos de los videojuegos disponibles en Pixel Forge.</p>
+      <div class="filter-bar" aria-label="Filtrar catálogo">
+        <button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filter-button" type="button" data-filter="aventura" aria-pressed="false">Aventura</button>
+        <button class="filter-button" type="button" data-filter="accion" aria-pressed="false">Acción</button>
+        <button class="filter-button" type="button" data-filter="rol" aria-pressed="false">Rol</button>
+      </div>
 
       <div id="catalogo-grid" class="catalog-grid" aria-live="polite"></div>
     </section>
@@ -42,10 +49,10 @@
     <section id="categorias" aria-labelledby="titulo-categorias">
       <h2 id="titulo-categorias">Categorías</h2>
       <ul>
-        <li><a href="#catalogo">Aventura</a></li>
-        <li><a href="#catalogo">Acción</a></li>
-        <li><a href="#catalogo">Rol</a></li>
-        <li><a href="#catalogo">Estrategia</a></li>
+        <li><a href="#catalogo" data-category-link="aventura">Aventura</a></li>
+        <li><a href="#catalogo" data-category-link="accion">Acción</a></li>
+        <li><a href="#catalogo" data-category-link="rol">Rol</a></li>
+        <li><a href="#catalogo" data-category-link="todos">Ver todo</a></li>
       </ul>
     </section>
 
